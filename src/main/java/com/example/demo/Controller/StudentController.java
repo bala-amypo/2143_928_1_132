@@ -1,3 +1,10 @@
+package com.example.demo.controller;
+import java.util.Collection;
+import org.springframework.beans.factory.annotation.Autowired;
+import org
+
+
+
 @RestController
 @RequestMapping("/student")
 public class Studct1{
@@ -19,7 +26,9 @@ public class Studct1{
 
     }
     @PutMapping("/update/{id}")
-    public Studentity updateStudent{
-        
+    public Studentity updateStudent(@PathVariable int id,@RequestBody Studentity st){
+        return ser.update(id,st);
+
     }
+    
 }
