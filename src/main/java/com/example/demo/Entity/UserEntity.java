@@ -1,7 +1,4 @@
 package com.example.demo.Entity;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-
 @Entity
 @Table(name = "users")
 public class UserEntity {
@@ -19,10 +16,14 @@ public class UserEntity {
     private String email;
 
     @NotBlank(message = "Password is required")
+    @Size(min = 6, message = "Password must be at least 6 characters")
     private String password;
 
+    @NotBlank(message = "Role is required")
     private String role = "MONITOR";
-}
+
+    private LocalDateTime createdAt = LocalDateTime.now();
+
 
     public UserEntity() {}
 
