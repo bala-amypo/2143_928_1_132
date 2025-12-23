@@ -1,7 +1,5 @@
 package com.example.demo.Entity;
 
-import jakarta.validation.constraints.NotBlank;
-
 @Entity
 public class SkillEntity {
 
@@ -16,17 +14,21 @@ public class SkillEntity {
     @NotBlank(message = "Category is required")
     private String category;
 
+    @NotBlank(message = "Description is required")
+    @Size(max = 200)
     private String description;
+
+    @NotNull
     private Boolean active = true;
 
-    // getters & setters
+
     public SkillEntity() {}
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {     // ✅ REQUIRED
+    public String getName() {     
         return name;
     }
 
@@ -34,7 +36,7 @@ public class SkillEntity {
         this.name = name;
     }
 
-    public String getCategory() { // ✅ REQUIRED
+    public String getCategory() { 
         return category;
     }
 
@@ -42,7 +44,7 @@ public class SkillEntity {
         this.category = category;
     }
 
-    public String getDescription() { // ✅ REQUIRED
+    public String getDescription() { 
         return description;
     }
 

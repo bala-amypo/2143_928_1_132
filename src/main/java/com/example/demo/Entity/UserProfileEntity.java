@@ -1,9 +1,6 @@
 package com.example.demo.Entity;
 
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Email;
-
 @Entity
 public class UserProfileEntity {
 
@@ -11,18 +8,24 @@ public class UserProfileEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Username required")
+    @NotBlank(message = "Username is required")
+    @Size(min = 3, max = 20)
     @Column(unique = true)
     private String username;
 
     @Email
-    @NotBlank(message = "Email required")
+    @NotBlank
     @Column(unique = true)
     private String email;
 
+    @Size(max = 250, message = "Bio should not exceed 250 characters")
     private String bio;
+
+    @NotNull
     private Boolean active = true;
 
+    private Timestamp createdAt = new Timestamp(System.currentTimeMillis());
+    private Timestamp updatedAt = new Timestamp(System.currentTimeMillis());
 
 
 private Timestamp createdAt = new Timestamp(System.currentTimeMillis());
