@@ -5,7 +5,7 @@ import com.example.demo.Service.UserProfileService;
 import com.example.demo.Entity.UserProfileEntity;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/user-profiles")
 public class UserProfileController {
 
     private final UserProfileService service;
