@@ -1,6 +1,6 @@
 package com.example.demo.Entity;
 
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class SkillEntity {
@@ -9,13 +9,17 @@ public class SkillEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Skill name is required")
     @Column(unique = true)
     private String name;
 
+    @NotBlank(message = "Category is required")
     private String category;
+
     private String description;
     private Boolean active = true;
 
+    // getters & setters
     public SkillEntity() {}
 
     public Long getId() {
