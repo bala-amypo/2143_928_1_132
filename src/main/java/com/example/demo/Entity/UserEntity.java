@@ -1,7 +1,6 @@
 package com.example.demo.Entity;
-
-import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "users")
@@ -11,16 +10,19 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Full name is required")
     private String fullName;
 
+    @Email(message = "Invalid email format")
+    @NotBlank(message = "Email is required")
     @Column(unique = true)
     private String email;
 
+    @NotBlank(message = "Password is required")
     private String password;
 
     private String role = "MONITOR";
-
-    private LocalDateTime createdAt = LocalDateTime.now();
+}
 
     public UserEntity() {}
 
