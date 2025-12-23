@@ -1,3 +1,8 @@
+package com.example.demo.Entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "users")
 public class UserEntity {
@@ -16,5 +21,8 @@ public class UserEntity {
     private String role = "MONITOR";
 
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    public UserEntity() {}
+
     // getters & setters
 }
