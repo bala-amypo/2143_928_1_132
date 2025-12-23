@@ -34,7 +34,7 @@ public class SkillEntity {
     }
 
     public String getName() {     
-    }
+        return name;   
 
     public void setName(String name) {
         this.name = name;
@@ -57,6 +57,10 @@ public class SkillEntity {
     }
 
     public Boolean getActive() {
-        return active;
+        return active;  
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 }
