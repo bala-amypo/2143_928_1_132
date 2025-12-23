@@ -33,15 +33,14 @@ public class SkillEntity {
         return id;
     }
 
-    public String getName() {     // ✅ REQUIRED
-        return name;
+    public String getName() {     
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getCategory() { // ✅ REQUIRED
+    public String getCategory() { 
         return category;
     }
 
@@ -49,7 +48,7 @@ public class SkillEntity {
         this.category = category;
     }
 
-    public String getDescription() { // ✅ REQUIRED
+    public String getDescription() { 
         return description;
     }
 

@@ -44,7 +44,7 @@ public class UserEntity {
         this.fullName = fullName;
     }
 
-    public String getEmail() {   // ✅ REQUIRED
+    public String getEmail() {   
         return email;
     }
 
