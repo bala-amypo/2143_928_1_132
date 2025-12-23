@@ -35,6 +35,7 @@ public class SkillEntity {
 
     public String getName() {     
         return name;   
+    }   // ✅ FIXED
 
     public void setName(String name) {
         this.name = name;
