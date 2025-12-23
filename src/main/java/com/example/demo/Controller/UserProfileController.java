@@ -15,7 +15,7 @@ public class UserProfileController {
     }
 
     @PostMapping
-    public UserProfileEntity create(@RequestBody UserProfileEntity user) {
+    public UserProfileEntity create(@Valid @RequestBody UserProfileEntity user) {
         return service.createUser(user);
     }
 
