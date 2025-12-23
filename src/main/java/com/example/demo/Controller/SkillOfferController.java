@@ -16,7 +16,7 @@ public class SkillOfferController {
     }
 
     @PostMapping
-    public SkillOfferEntity create(@RequestBody SkillOfferEntity offer) {
+    public SkillOfferEntity create(@Valid @RequestBody SkillOfferEntity offer) {
         return service.createOffer(offer);
     }
 

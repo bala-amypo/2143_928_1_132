@@ -16,12 +16,12 @@ public class SkillController {
     }
 
     @PostMapping
-    public SkillEntity create(@RequestBody SkillEntity skill) {
+    public SkillEntity create( @Valid @RequestBody SkillEntity skill) {
         return service.createSkill(skill);
     }
 
     @PutMapping("/{id}")
-    public SkillEntity update(@PathVariable Long id, @RequestBody SkillEntity skill) {
+    public SkillEntity update(@PathVariable Long id,@Valid @RequestBody SkillEntity skill) {
         return service.updateSkill(id, skill);
     }
 

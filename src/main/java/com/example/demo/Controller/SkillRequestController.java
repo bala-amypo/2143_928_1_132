@@ -16,7 +16,7 @@ public class SkillRequestController {
     }
 
     @PostMapping
-    public SkillRequestEntity create(@RequestBody SkillRequestEntity request) {
+    public SkillRequestEntity create(@Valid @RequestBody SkillRequestEntity request) {
         return service.createRequest(request);
     }
 
