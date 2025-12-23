@@ -21,7 +21,8 @@ public class UserProfileEntity {
     private String email;
 
     private String bio;
-    private Boolean active = true
+    private Boolean active = true;
+
 
 
 private Timestamp createdAt = new Timestamp(System.currentTimeMillis());
