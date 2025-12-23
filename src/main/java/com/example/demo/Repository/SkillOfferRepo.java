@@ -7,4 +7,3 @@ import java.util.List;
 public interface SkillOfferRepo extends JpaRepository<SkillOfferEntity, Long> {
     List<SkillOfferEntity> findByUser_Id(Long userId);
 }
-
