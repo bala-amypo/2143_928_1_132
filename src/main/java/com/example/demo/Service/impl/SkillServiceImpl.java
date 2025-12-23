@@ -1,34 +1,25 @@
 package com.example.demo.Service.impl;
 
 import org.springframework.stereotype.Service;
-import com.example.demo.Service.SkillService;
-import com.example.demo.Repository.SkillRepo;
-import com.example.demo.Entity.SkillEntity;
-import java.util.List;
+import com.example.demo.Service.UserProfileService;
+import com.example.demo.Repository.UserProfileRepo;
+import com.example.demo.Entity.UserProfileEntity;
 
 @Service
-public class SkillServiceImpl implements SkillService {
+public class UserProfileServiceImpl implements UserProfileService {
 
-    private final SkillRepo repo;
+    private final UserProfileRepo repo;
 
-    public SkillServiceImpl(SkillRepo repo) {
+    public UserProfileServiceImpl(UserProfileRepo repo) {
         this.repo = repo;
     }
 
-    public SkillEntity createSkill(SkillEntity skill) {
-        return repo.save(skill);
+    public UserProfileEntity createUser(UserProfileEntity user) {
+        return repo.save(user);
     }
 
-    public SkillEntity updateSkill(Long id, SkillEntity skill) {
-        SkillEntity s = repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Skill not found"));
-        s.setName(skill.getName());
-        s.setCategory(skill.getCategory());
-        s.setDescription(skill.getDescription());
-        return repo.save(s);
-    }
-
-    public List<SkillEntity> getAllSkills() {
-        return repo.findAll();
+    public UserProfileEntity getUserById(Long id) {
+        return repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("UserProfile not found"));
     }
 }
