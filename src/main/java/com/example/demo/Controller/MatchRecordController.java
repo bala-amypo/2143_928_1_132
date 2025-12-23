@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.*;
 import com.example.demo.Service.MatchRecordService;
 import com.example.demo.Entity.MatchRecordEntity;
 import java.util.List;
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/matches")

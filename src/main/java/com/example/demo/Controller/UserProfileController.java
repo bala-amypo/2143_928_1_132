@@ -3,6 +3,8 @@ package com.example.demo.Controller;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.Service.UserProfileService;
 import com.example.demo.Entity.UserProfileEntity;
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/user-profiles")

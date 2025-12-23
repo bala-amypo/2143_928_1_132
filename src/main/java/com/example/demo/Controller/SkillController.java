@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.*;
 import com.example.demo.Service.SkillService;
 import com.example.demo.Entity.SkillEntity;
 import java.util.List;
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/skills")
