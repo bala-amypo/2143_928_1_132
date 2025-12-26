@@ -1,14 +1,13 @@
-package com.example.demo.Controller;
+package com.example.barter.controller;
 
+import com.example.barter.model.SkillRequest;
+import com.example.barter.service.SkillRequestService;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.Service.SkillRequestService;
-import com.example.demo.Entity.SkillRequestEntity;
-import java.util.List;
-import jakarta.validation.Valid;
 
+import java.util.List;
 
 @RestController
-@RequestMapping("/api/skill-requests")
+@RequestMapping("/requests")
 public class SkillRequestController {
 
     private final SkillRequestService service;
@@ -18,17 +17,12 @@ public class SkillRequestController {
     }
 
     @PostMapping
-    public SkillRequestEntity create(@Valid @RequestBody SkillRequestEntity request) {
-        return service.createRequest(request);
+    public SkillRequest create(@RequestBody SkillRequest request) {
+        return service.create(request);
     }
 
-    @GetMapping("/{id}")
-    public SkillRequestEntity getById(@PathVariable Long id) {
-        return service.getRequestById(id);
-    }
-
-    @GetMapping("/user/{userId}")
-    public List<SkillRequestEntity> getByUser(@PathVariable Long userId) {
-        return service.getRequestsByUser(userId);
+    @GetMapping
+    public List<SkillRequest> getActive() {
+        return service.getActiveRequests();
     }
 }
