@@ -54,7 +54,6 @@ public class MatchRecord {
     }
 
     public void setSkillOfferedByA(Skill skillOfferedByA) {
-        this.skillOfferedByA = skillOfferedByA;
     }
 
     public Skill getSkillOfferedByB() {

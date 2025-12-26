@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.barter.model;
 
 import jakarta.persistence.*;
 
@@ -10,53 +10,53 @@ public class SkillRequest {
     private Long id;
 
     @ManyToOne
-    private UserProfile user;
+    private User user;
 
     @ManyToOne
-    private Skill skill;
+    private SkillCategory skill;
 
     private String urgencyLevel;
 
     private boolean active = true;
 
-    // ---------- Getters & Setters ----------
+    // ===== Getters & Setters =====
 
     public Long getId() {
         return id;
     }
-
+ 
     public void setId(Long id) {
         this.id = id;
     }
-
-    public UserProfile getUser() {
+ 
+    public User getUser() {
         return user;
     }
-
-    public void setUser(UserProfile user) {
+ 
+    public void setUser(User user) {
         this.user = user;
     }
-
-    public Skill getSkill() {
+ 
+    public SkillCategory getSkill() {
         return skill;
     }
-
-    public void setSkill(Skill skill) {
+ 
+    public void setSkill(SkillCategory skill) {
         this.skill = skill;
     }
-
+ 
     public String getUrgencyLevel() {
         return urgencyLevel;
     }
-
+ 
     public void setUrgencyLevel(String urgencyLevel) {
         this.urgencyLevel = urgencyLevel;
     }
-
+ 
     public boolean isActive() {
         return active;
     }
-
+ 
     public void setActive(boolean active) {
         this.active = active;
     }
