@@ -1,8 +1,10 @@
-package com.example.demo.service;
+package com.example.barter.service;
 
-import com.example.demo.model.AppUser;
+import com.example.barter.model.User;
 
 public interface UserService {
 
-    AppUser findByEmail(String email);
+    User register(User user);
+
+    User getUserByEmail(String email);
 }

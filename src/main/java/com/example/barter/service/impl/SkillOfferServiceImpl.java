@@ -1,8 +1,8 @@
-package com.example.demo.service.impl;
+package com.example.barter.service.impl;
 
-import com.example.demo.model.SkillOffer;
-import com.example.demo.repository.SkillOfferRepository;
-import com.example.demo.service.SkillOfferService;
+import com.example.barter.model.SkillOffer;
+import com.example.barter.repository.SkillOfferRepository;
+import com.example.barter.service.SkillOfferService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,18 +17,12 @@ public class SkillOfferServiceImpl implements SkillOfferService {
     }
 
     @Override
-    public SkillOffer createOffer(SkillOffer offer) {
+    public SkillOffer create(SkillOffer offer) {
         return repository.save(offer);
     }
 
     @Override
-    public SkillOffer getOfferById(Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Offer not found"));
-    }
-
-    @Override
-    public List<SkillOffer> getOffersByUser(Long userId) {
-        return repository.findByUserId(userId);
+    public List<SkillOffer> getActiveOffers() {
+        return repository.findByActiveTrue();
     }
 }
