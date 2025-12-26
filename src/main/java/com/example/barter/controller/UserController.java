@@ -1,13 +1,11 @@
-package com.example.demo.Controller;
+package com.example.barter.controller;
 
+import com.example.barter.model.User;
+import com.example.barter.service.UserService;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
-
-import com.example.demo.Service.UserService;
-import com.example.demo.Entity.UserEntity;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/users")
 public class UserController {
 
     private final UserService service;
@@ -16,13 +14,8 @@ public class UserController {
         this.service = service;
     }
 
-    @PostMapping("/register")
-    public UserEntity register(@Valid @RequestBody UserEntity user) {
-        return service.register(user);
-    }
-
-    @GetMapping("/email/{email}")
-    public UserEntity findByEmail(@PathVariable String email) {
-        return service.findByEmail(email);
+    @GetMapping("/{email}")
+    public User getUser(@PathVariable String email) {
+        return service.getUserByEmail(email);
     }
 }

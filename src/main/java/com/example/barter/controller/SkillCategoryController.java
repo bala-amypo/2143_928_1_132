@@ -1,34 +1,28 @@
-package com.example.demo.Controller;
+package com.example.barter.controller;
 
+import com.example.barter.model.SkillCategory;
+import com.example.barter.service.SkillCategoryService;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.Service.SkillService;
-import com.example.demo.Entity.SkillEntity;
-import java.util.List;
-import jakarta.validation.Valid;
 
+import java.util.List;
 
 @RestController
-@RequestMapping("/api/skills")
-public class SkillController {
+@RequestMapping("/skills")
+public class SkillCategoryController {
 
-    private final SkillService service;
+    private final SkillCategoryService service;
 
-    public SkillController(SkillService service) {
+    public SkillCategoryController(SkillCategoryService service) {
         this.service = service;
     }
 
     @PostMapping
-    public SkillEntity create( @Valid @RequestBody SkillEntity skill) {
-        return service.createSkill(skill);
-    }
-
-    @PutMapping("/{id}")
-    public SkillEntity update(@PathVariable Long id,@Valid @RequestBody SkillEntity skill) {
-        return service.updateSkill(id, skill);
+    public SkillCategory create(@RequestBody SkillCategory category) {
+        return service.create(category);
     }
 
     @GetMapping
-    public List<SkillEntity> getAll() {
-        return service.getAllSkills();
+    public List<SkillCategory> getAll() {
+        return service.getAll();
     }
 }

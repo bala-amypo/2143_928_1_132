@@ -1,14 +1,13 @@
-package com.example.demo.Controller;
+package com.example.barter.controller;
 
+import com.example.barter.model.SkillOffer;
+import com.example.barter.service.SkillOfferService;
 import org.springframework.web.bind.annotation.*;
-import com.example.demo.Service.SkillOfferService;
-import com.example.demo.Entity.SkillOfferEntity;
-import java.util.List;
-import jakarta.validation.Valid;
 
+import java.util.List;
 
 @RestController
-@RequestMapping("/api/skill-offers")
+@RequestMapping("/offers")
 public class SkillOfferController {
 
     private final SkillOfferService service;
@@ -18,17 +17,12 @@ public class SkillOfferController {
     }
 
     @PostMapping
-    public SkillOfferEntity create(@Valid @RequestBody SkillOfferEntity offer) {
-        return service.createOffer(offer);
+    public SkillOffer create(@RequestBody SkillOffer offer) {
+        return service.create(offer);
     }
 
-    @GetMapping("/{id}")
-    public SkillOfferEntity getById(@PathVariable Long id) {
-        return service.getOfferById(id);
-    }
-
-    @GetMapping("/user/{userId}")
-    public List<SkillOfferEntity> getByUser(@PathVariable Long userId) {
-        return service.getOffersByUser(userId);
+    @GetMapping
+    public List<SkillOffer> getActive() {
+        return service.getActiveOffers();
     }
 }
