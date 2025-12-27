@@ -15,6 +15,4 @@ public class LoginResponse {
     public String getToken() {
         return token;
     }
-}…………………………
-package com.example.demo.dto;
-
+}
