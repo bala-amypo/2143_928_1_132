@@ -1,5 +1,3 @@
-// jdhiweyvfc
-
 package com.example.demo.servlet;
 
 import jakarta.servlet.ServletException;
