@@ -1,4 +1,6 @@
-//hiuchjkbcpackage com.example.demo.controller;
+//hiuchjkbc
+// 
+package com.example.demo.controller;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
