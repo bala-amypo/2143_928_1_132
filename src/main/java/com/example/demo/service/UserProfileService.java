@@ -1,5 +1,3 @@
-// cbkweifgivd
-
 
 
 package com.example.demo.service;
@@ -15,4 +13,4 @@ public interface UserProfileService {
     void deactivateUser(Long id);
 }
 
-// ……………………………….
+

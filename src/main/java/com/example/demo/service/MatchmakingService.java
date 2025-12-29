@@ -1,7 +1,4 @@
-// kshcvwekdguxukvd
 
-
-// SERVICE
 package com.example.demo.service;
 
 import com.example.demo.model.MatchRecord;
@@ -14,4 +11,4 @@ public interface MatchmakingService {
     List<MatchRecord> getMatchesForUser(Long userId);
 }
 
-// ………………………..
+

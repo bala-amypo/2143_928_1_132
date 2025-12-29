@@ -1,4 +1,4 @@
-// jdhbckdbc/
+
 
 
 package com.example.demo.service;
@@ -15,4 +15,4 @@ public interface SkillOfferService {
     List<SkillOffer> getOffersByUser(Long userId);
 }
 
-// ………………………………
+

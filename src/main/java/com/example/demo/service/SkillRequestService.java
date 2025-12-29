@@ -1,4 +1,4 @@
-// dewfvcikuhdil
+
 
 
 
@@ -17,4 +17,3 @@ public interface SkillRequestService {
     List<SkillRequest> getRequestsByUser(Long userId);
 }
 
-// ……………………………….
