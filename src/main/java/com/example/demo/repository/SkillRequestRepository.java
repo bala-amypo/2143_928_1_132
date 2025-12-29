@@ -1,5 +1,3 @@
-//pwqihsoqvdgc
-
 
 package com.example.demo.repository;
 
@@ -13,4 +11,4 @@ public interface SkillRequestRepository extends JpaRepository<SkillRequest, Long
     List<SkillRequest> findByUserId(Long userId);
 }
 
-// ………………………………
+

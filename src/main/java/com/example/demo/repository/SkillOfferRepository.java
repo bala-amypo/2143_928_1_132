@@ -14,4 +14,3 @@ public interface SkillOfferRepository extends JpaRepository<SkillOffer, Long> {
     List<SkillOffer> findByUserId(Long userId);
 }
 
-// ………………………………
