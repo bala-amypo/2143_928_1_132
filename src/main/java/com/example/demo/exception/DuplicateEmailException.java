@@ -1,9 +1,4 @@
-//qwsjwqeqwcdeghhvvjnkjwvdihdbd
 
-
-
-// 
-// EXCEPTION
 package com.example.demo.exception;
 
 public class DuplicateEmailException extends RuntimeException {
@@ -12,15 +7,6 @@ public class DuplicateEmailException extends RuntimeException {
         super("Email already exists");
     }
 }
-
-// ……………………………..
-
-// ……………………………..
-
-// …………………………………..
-
-
-// ………………………………
 
 
 

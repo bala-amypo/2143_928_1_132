@@ -1,5 +1,3 @@
-//wdqefdwfcwfc
-
 
 package com.example.demo.exception;
 

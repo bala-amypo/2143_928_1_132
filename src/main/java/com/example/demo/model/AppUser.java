@@ -1,4 +1,3 @@
-//whsfqwgsvhgwqcd
 
 
 package com.example.demo.model;
@@ -52,4 +51,4 @@ public class AppUser {
     }
 }
 
-// …………………………
+

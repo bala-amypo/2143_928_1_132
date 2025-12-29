@@ -1,4 +1,3 @@
-//q spjgshkv
 
 package com.example.demo.model;
 
@@ -23,7 +22,7 @@ public class SkillRequest {
     @JoinColumn(name = "skill_id")
     private Skill skill;
 
-    // getters and setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -40,4 +39,4 @@ public class SkillRequest {
     public void setSkill(Skill skill) { this.skill = skill; }
 }
 
-// ………………………………..
+

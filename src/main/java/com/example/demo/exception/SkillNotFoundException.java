@@ -1,6 +1,3 @@
-//lwksw;qdhqwd;qidbbwejfgfuiweid
-
-
 
 package com.example.demo.exception;
 
