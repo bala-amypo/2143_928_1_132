@@ -22,22 +22,22 @@ public class SecurityConfig {
             )
             .authorizeHttpRequests(auth -> auth
 
-                // ✅ PUBLIC ENDPOINTS
+                
                 .requestMatchers(
                     "/api/auth/**",
-                    "/users",          // POST signup
-                    "/users/*",        // GET /users/{id}
+                    "/users",          
+                    "/users/*",        
                     "/v3/api-docs/**",
                     "/swagger-ui/**",
                     "/swagger-ui.html"
                 ).permitAll()
 
-                // 🔐 ADMIN-ONLY
+                
                 .requestMatchers(
                     "/users/*/deactivate"
                 ).hasRole("ADMIN")
 
-                // 🔒 EVERYTHING ELSE
+               
                 .anyRequest().authenticated()
             );
 
